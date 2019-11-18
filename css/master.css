@@ -1,0 +1,132 @@
+.login {
+  margin: 0;
+  padding: 0;
+  background: url(../img/ecommerce.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+.caja_login {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color:#fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.caja_login .avatar {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+
+}
+.caja_login h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+
+}
+.caja_login label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+
+}
+.caja_login input {
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+.caja_login input[type="text"],
+.caja_login input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+}
+.caja_login input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  background: #fff2;
+  font-size: 18px;
+  border-radius: 20px;
+
+}
+.caja_login a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+
+}
+.caja_login a:hover {
+  color: #fff;
+
+}
+.contacto {
+  background-image: url(../img/contacto.jpg);
+  margin: 0;
+  padding: 0;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  font-family: monospace;
+
+}
+.caja_contacto {
+  width: 450px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 10%;
+  border-radius: 7px;
+}
+.caja_contacto h2 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.caja_contacto input, .caja_contacto textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+}
+.caja_contacto textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+.caja_contacto #boton {
+  background: #31384A;
+  color: #fff;
+  padding: 20px;
+}
+.caja_contacto #boton:hover {
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+}
+@media (max-width:480px){
+  .caja_contacto {
+    width: 100%;
+  }
+}
