@@ -192,6 +192,45 @@ footer a {
   cursor: pointer;
   background: rgba(0,0,0,0.5);
 }
+/*   Carrito   */
+.carro {
+  margin: 0;
+  padding: 0;
+  background: url(../img/ecommerce.jpg) no-repeat center top;
+  background-size: 100vw 100vh;
+  font-family: sans-serif;
+
+}
+.caja_carro {
+  width: 75vw;
+  height: 75vh;
+  margin: auto;
+  background: rgba(114, 244,230, 0.4);
+  padding: 10px 20px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 7px;
+}
+
+.caja_carro li {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border-bottom: 1px solid grey;
+  text-decoration: none;
+}
+.caja_carro h2{
+  color: #000;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
 @media (max-width:480px){
   .caja_contacto {
     width: 100%;
