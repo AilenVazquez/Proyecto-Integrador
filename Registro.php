@@ -41,7 +41,7 @@
                 <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta/</a>
               </li>
               <li>
-                <a href="http://localhost/Proyecto-Integrador/Login.html">Ingresá/</a>
+                <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá/</a>
               </li>
               <li>
                 <a href="">Perfil/</a>
@@ -116,7 +116,7 @@
         <div class="">
           <ul>
             <li>
-              <a href="http://localhost/Proyecto-Integrador/Contacto.html">Contactanos</a>
+              <a href="http://localhost/Proyecto-Integrador/Contacto.php">Contactanos</a>
             </li>
             <li>
               <a href="">Preguntas frecuentes</a>

@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/master.css">
 </head>
-  <body class="login">
+  <body class="carro">
     <header>
       <nav class="nav-header">
         <div class="home">
@@ -40,7 +40,7 @@
               <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta/</a>
             </li>
             <li>
-              <a href="http://localhost/Proyecto-Integrador/Login.html">Ingresá/</a>
+              <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá/</a>
             </li>
             <li>
               <a href="">Perfil/</a>
@@ -53,22 +53,15 @@
       </nav>
     </header>
 
-    <div class="caja_login">
-      <img class= "avatar" src="img/images.jpg" alt="logo Login">
-      <h1>Ingrese sus datos</h1>
-      <form >
-        <!-- Usuario -->
-        <label for="Usuario">Usuario</label>
-        <input type="text" name="usuario" value="" placeholder="Ingrese Usuario">
-        <!-- para el password -->
-        <label for="Password">Contraseña</label>
-        <input type="password" name="password" value="" placeholder="Ingrese Contraseña">
+    <div class="caja_carro">
+      <h2>Carro de Compras</h2>
+      <ol>
+        <li>Aqui van los productos</li>
+        <li>Aqui van los productos</li>
+        <li>Aqui van los productos</li>
+        <li>Aqui van los productos</li>
+      </ol>
 
-        <input type="submit" name="enviar" value="ingresar">
-
-        <a href="#">Olvido su contraseña?</a><br>
-        <a href="#">Crear cuenta</a>
-      </form>
     </div>
 
   </body>
