@@ -224,10 +224,23 @@ footer a {
 }
 
 .home section {
-  padding: 9vh 10% 9vh 10%;
+  padding: 9vh 7% 9vh 7%;
   background-color: rgb(241, 239, 239);
 }
 
 .home img{
   height: 15vh;
+}
+
+.col-6 {
+  border: black 1px solid;
+  border-radius: 10px;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home section .row p {
+  text-align: center;
 }
