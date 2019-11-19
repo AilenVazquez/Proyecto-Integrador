@@ -1,3 +1,65 @@
+/*   HEADER   */
+
+header {
+  margin: 0;
+  padding: 3vh 4% 2vh 4%;
+  background-color: rgba(238, 255, 6, 1)
+}
+
+.nav-header {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.home {
+  float: left;
+}
+
+.buscador {
+  float: left;
+}
+
+.otros {
+  float: left;
+}
+
+.nav-header ul {
+  list-style-type: none;
+}
+
+.nav-header li {
+  display: inline;
+}
+
+.nav-header a, button, input {
+  color: black;
+  font-size: 2vh;
+}
+
+/*   FOOTER   */
+
+footer {
+  padding: 3vh 4% 2vh 4%;
+  background-color: rgb(246, 255, 154)
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer li {
+  display: inline;
+}
+
+footer a {
+  color: black;
+  padding:  9vh 3% 9vh 3%;
+}
+
+/*   LOGIN   */
+
 .login {
   margin: 0;
   padding: 0;
@@ -78,6 +140,10 @@
   color: #fff;
 
 }
+
+/*   CONTATO   */
+
+
 .contacto {
   background-image: url(../img/contacto.jpg);
   margin: 0;
@@ -93,7 +159,8 @@
   background: rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
   box-sizing: border-box;
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   border-radius: 7px;
 }
 .caja_contacto h2 {
@@ -129,4 +196,38 @@
   .caja_contacto {
     width: 100%;
   }
+}
+
+
+/*   REGISTRO    */
+
+
+.Registro {
+  margin: 0;
+}
+
+.Registro .form-registro {
+  padding: 9vh 10% 9vh 10%;
+}
+
+.Registro .form-registro form{
+  padding: 20px;
+  border: black 1px solid;
+  border-radius: 30px;
+  background-color: rgb(232, 232, 232);
+}
+
+/*   HOME   */
+
+.home {
+  margin: 0;
+}
+
+.home section {
+  padding: 9vh 10% 9vh 10%;
+  background-color: rgb(241, 239, 239);
+}
+
+.home img{
+  height: 15vh;
 }
