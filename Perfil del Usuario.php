@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Css\Style.css">
+    <link rel="stylesheet" href="css\master.css">
     <title></title>
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,7 +21,7 @@
 
 </div>
 <div class="usuario">
-  <img class="usuario" src="usuario.png" alt="">
+  <img class="usuario" src="img\usuario.png" alt="">
 </div>
 <div class="usuario">
   <article class="">
@@ -31,7 +31,7 @@
   <article class="">
     EduSanches@yahoo.com.ar
   </article>
-  
+
 </div>
 
   </body>
