@@ -283,3 +283,66 @@ footer a {
 .home section .row p {
   text-align: center;
 }
+/** Css Mariano========================================================================
+=============================================================================*/
+body#index{
+background-image: url("../Proyecto-Integrador-master/img/ecommerce.jpg");
+background-repeat: no-repeat;
+background-size: 1050px 900px;
+background-position: left top;
+margin-left: 10%;
+}
+body{
+     box-sizing: border-box;
+     max-width: 460px;
+     padding-left: 15px;
+     width: 766px;
+     overflow: hidden;
+     opacity: 0,5;
+}
+p strong{
+  padding-left: 20px;
+  font-size: 25px;
+}
+li div.numero{
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin: 8px;
+  padding: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+}
+article#index{
+  font-size: 35px;
+}
+article{
+  padding: inherit;
+  margin-left: 20px;
+  float: inherit;
+  font-size: 20px;
+}
+article.respuesta{
+  font-size: 15px;
+}
+.usuario img{
+  display: block;
+  width: 400px;
+  height:400px;
+  position: relative;
+}
+/** responsive============================*/
+@media only screen and(max-width:766px){
+  body{
+    width: 480px;
+  }
+  article{
+    width: 390px;
+  }
+  body#index{
+    width: 480px;
+  }
+}
