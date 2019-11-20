@@ -13,26 +13,84 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body id="index">
-    <article id="index">
-      HOME /
+    <header>
+      <nav class="nav-header">
+        <div class="home">
+          <ul>
+            <li>
+              <a href="http://localhost/Proyecto-Integrador/Home.php">Home</a>
+            </li>
+          </ul>
+        </div>
+        <div class="buscador">
+          <ul>
+            <li>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Busca productos" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="otros">
+          <ul>
+            <li>
+              <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta/</a>
+            </li>
+            <li>
+              <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá/</a>
+            </li>
+            <li>
+              <a href="">Perfil/</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section>
+   <article id="titulo">
+    Perfil del Usuario
     </article>
-     <p><strong>Perfil del Usuario</strong>  </p>
     <div class="conteiner">
 
 </div>
 <div class="usuario">
   <img class="usuario" src="img\usuario.png" alt="">
 </div>
-<div class="usuario">
+<div class="usuario1">
+  <br>
   <article class="">
-    <strong>Eduardo Sanches</strong>
+    <strong>Nombre: Eduardo Sanches</strong>
   </article>
   <br>
   <article class="">
-    EduSanches@yahoo.com.ar
+    Email: EduSanches@yahoo.com.ar
   </article>
-
+  <br>
+  <article class="">
+    Direccion: Uruguay 270 Godoy Cruz
+  </article>
+  <br>
+  <article class="">
+    Ciudad: Mendoza
+  </article>
+  <br>
 </div>
-
+</section>
+<footer>
+  <div class="">
+    <ul>
+      <li>
+        <a href="http://localhost/Proyecto-Integrador/Contacto.php">Contactanos</a>
+      </li>
+      <li>
+        <a href="">Preguntas frecuentes</a>
+      </li>
+    </ul>
+  </div>
+</footer>
   </body>
 </html>

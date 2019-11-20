@@ -283,22 +283,22 @@ footer a {
 .home section .row p {
   text-align: center;
 }
-/** Css Mariano========================================================================
-=============================================================================*/
+/*Preguntas Frecuentes y Perfil De usuario*/
 body#index{
-background-image: url("img/ecommerce.jpg");
-background-repeat: no-repeat;
-background-size: 1050px 900px;
-background-position: left top;
-margin-left: 10%;
+  margin: 0;
+  padding: 0;
+  background color:  rgb(232, 232, 232);
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+  position: inherit;
 }
-body{
+.padre{
      box-sizing: border-box;
      max-width: 460px;
      padding-left: 15px;
      width: 766px;
      overflow: hidden;
-     opacity: 0,5;
 }
 p strong{
   padding-left: 20px;
@@ -316,7 +316,7 @@ li div.numero{
   background-color: black;
   border-radius: 50%;
 }
-article#index{
+article#titulo{
   font-size: 35px;
 }
 article{
@@ -334,15 +334,7 @@ article.respuesta{
   height:400px;
   position: relative;
 }
-/** responsive============================*/
-@media only screen and(max-width:766px){
-  body{
-    width: 480px;
-  }
-  article{
-    width: 390px;
-  }
-  body#index{
-    width: 480px;
-  }
+.usuario1 article{
+  font-size: 30px;
+  background-color: rgba(0, 209, 255, 0.65);
 }
