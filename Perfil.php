@@ -1,5 +1,23 @@
 <?php
  require_once("Partes/usuario.php");
+ if (isset($userActivo)) {
+   $usuariosGuardados = file_get_contents('usuarios.json');
+   $arrayUsuarios = explode(PHP_EOL, $usuariosGuardados);
+   array_pop($arrayUsuarios);
+   foreach($arrayUsuarios as $usuarioJson) {
+       $userFinal = json_decode($usuarioJson, true);
+
+       if($userActivo == $userFinal['username']) {
+         $nombre = $userFinal['nombre'];
+         $email = $userFinal['email'];
+         $ciudad = $userFinal['city'];
+         $direccion = $userFinal['address'];
+         $postal= $userFinal['postal'];
+         $imagen= $userFinal['imagen'];
+
+       }
+   }
+ }
 ?>
 
 
@@ -22,27 +40,32 @@
 
       <div class="usuario">
         <center>
-          <img class="usuario" src="img\usuario.png" alt="">
+          <img class="usuario" src="img\<?= $imagen ?>" alt="">
         </center>
       </div>
 
       <div class="usuario1">
         <br>
         <article class="">
-          <strong>Nombre: Eduardo Sanches</strong>
+          <strong>Nombre: <?= $nombre ?></strong>
         </article>
         <br>
         <article class="">
-          Email: EduSanches@yahoo.com.ar
+          Email: <?= $email ?>
         </article>
         <br>
         <article class="">
-          Direccion: Uruguay 270 Godoy Cruz
+          Direccion: <?= $direccion ?>
         </article>
         <br>
         <article class="">
-          Ciudad: Mendoza
+          Ciudad: <?= $ciudad ?>
         </article>
+        <br>
+        <article class="">
+          Codigo Postal: <?= $postal ?>
+        </article>
+
         <br>
       </div>
     </section>
