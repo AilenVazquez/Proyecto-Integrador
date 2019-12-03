@@ -1,6 +1,6 @@
 <nav class="nav-header">
-  <div class="home">
-    <ul>
+  <div class="headerHome">
+    <ul class="ulHeader">
       <li>
         <a href="http://localhost/Proyecto-Integrador/Home.php">Home</a>
       </li>
@@ -19,17 +19,13 @@
   <div class="otros">
     <?php if (isset($userActivo)): ?>
       <ul>
-
-        <li>
-          <a href="http://localhost/Proyecto-Integrador/Perfil.php">Perfil/</a>
-        </li>
         <li>
           <a href="http://localhost/Proyecto-Integrador/carrito.php"><i class="fas fa-shopping-cart"></i></a>
         </li>
-
       </ul>
+
       <form class="boton-salir" action="logout.php" method="post">
-        <label for=""><?= $userActivo ?></label>
+        <label for=""><a href="http://localhost/Proyecto-Integrador/Perfil.php"><?= $userActivo ?></a></label>
         <button type="submit" name="salir">Cerrar sesion</button>
       </form>
 

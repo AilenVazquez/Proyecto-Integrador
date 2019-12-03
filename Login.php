@@ -41,10 +41,7 @@ if($_POST) {
             $userFinal = json_decode($usuarioJson, true);
 
             if($_POST['email'] == $userFinal['email']) {
-              echo "email correcto";
-
                 if(password_verify($_POST['password'], $userFinal['password'])) {
-                  echo "login correcto";
                   $_SESSION['nombre'] = $userFinal['nombre'];
                   $_SESSION['email'] = $userFinal['email'];
                   $_SESSION['username'] = $userFinal['username'];
