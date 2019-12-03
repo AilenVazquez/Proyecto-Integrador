@@ -5,7 +5,7 @@ if($_SESSION){
   header('Location: bienvenido.php');
   exit;
 }
-
+$arrayDeErrores = "";
 function validarRegistracion($unArray) {
 
     $errores = [];
@@ -116,11 +116,19 @@ if($_POST) {
             header('Location: bienvenido.php');
             exit;
         }
-        header('Location: Login.php');
-        exit;
+        // header('Location: Login.php');
+        // exit;
     }
 }
-
+function persistirDato($arrayE, $campo) {
+    if( isset($arrayE[$campo]) ) {
+        return "";
+    } else {
+        if(isset($_POST[$campo])) {
+            return $_POST[$campo];
+        }
+    }
+}
  ?>
 
 
@@ -157,19 +165,19 @@ if($_POST) {
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="nombre">Nombre Completo</label>
-              <input type="text" class="form-control" id="nombre" name="nombre"placeholder="Nombres">
+              <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?= persistirDato($arrayDeErrores, 'nombre'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small>
             </div>
             <div class="form-group col-md-6">
               <label for="username">Usuario</label>
-              <input type="text" class="form-control" id="username" name="username"placeholder="Usuario">
+              <input type="text" class="form-control" id="username" name="username"placeholder="Usuario" value="<?= persistirDato($arrayDeErrores, 'username'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['username']) ? $arrayDeErrores['username'] : "" ?></small>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="email@gmail.com">
+              <input type="email" class="form-control" id="email" name="email" placeholder="email@gmail.com" value="<?= persistirDato($arrayDeErrores, 'email'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['email']) ? $arrayDeErrores['email'] : "" ?></small>
             </div>
             <div class="form-group col-md-6">
@@ -180,13 +188,13 @@ if($_POST) {
           </div>
           <div class="form-group">
             <label for="address">Direccion</label>
-            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" value="<?= persistirDato($arrayDeErrores, 'address'); ?>">
             <small class="text-danger"><?= isset($arrayDeErrores['address']) ? $arrayDeErrores['address'] : "" ?></small>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="city">Ciudad</label>
-              <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad">
+              <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad" value="<?= persistirDato($arrayDeErrores, 'city'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['city']) ? $arrayDeErrores['city'] : "" ?></small>
             </div>
             <div class="form-group col-md-4">
@@ -202,7 +210,7 @@ if($_POST) {
             </div>
             <div class="form-group col-md-2">
               <label for="postal">Codigo postal</label>
-              <input type="text" class="form-control" id="postal" name="postal" placeholder="1234">
+              <input type="text" class="form-control" id="postal" name="postal" placeholder="1234" value="<?= persistirDato($arrayDeErrores, 'postal'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['postal']) ? $arrayDeErrores['postal'] : "" ?></small>
             </div>
           </div>
