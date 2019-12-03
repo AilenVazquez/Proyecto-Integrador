@@ -27,7 +27,7 @@ if($_SESSION){
     </header>
 
     <main>
-      <h1>Bienvenido</h1>
+      <h1>Bienvenido!</h1>
     </main>
 
     <footer>

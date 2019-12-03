@@ -73,6 +73,7 @@ footer a {
   font-family: sans-serif;
   height: 100vh;
 }
+
 .caja_login {
   width: 320px;
   height: 420px;
@@ -85,6 +86,7 @@ footer a {
   box-sizing: border-box;
   padding: 70px 30px;
 }
+
 .caja_login .avatar {
   width: 100px;
   height: 100px;
@@ -93,27 +95,27 @@ footer a {
   position: absolute;
   top: -50px;
   left: calc(50% - 50px);
-
 }
+
 .caja_login h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
-
 }
+
 .caja_login label {
   margin: 0;
   padding: 0;
   font-weight: bold;
   display: block;
-
 }
+
 .caja_login input {
   width: 100%;
   margin-bottom: 20px;
-
 }
+
 .caja_login input[type="email"],
 .caja_login input[type="password"]{
   border: none;
@@ -124,6 +126,7 @@ footer a {
   height: 40px;
   font-size: 16px;
 }
+
 .caja_login input[type="submit"]{
   border: none;
   outline: none;
@@ -132,8 +135,8 @@ footer a {
   background: #fff2;
   font-size: 18px;
   border-radius: 20px;
-
 }
+
 .recordarme label, .recordarme #gridCheck {
   display: block;
   position: relative;
@@ -142,10 +145,11 @@ footer a {
   color: darkgrey;
   top: -10px;
 }
-.recordarme #gridCheck{
 
+.recordarme #gridCheck{
   top: -28px;
 }
+
 .caja_login a {
   text-decoration: none;
   font-size: 12px;
@@ -154,9 +158,9 @@ footer a {
   position: relative;
   top: -40px;
 }
+
 .caja_login a:hover {
   color: #fff;
-
 }
 
 /*   CONTATO   */
@@ -167,9 +171,8 @@ footer a {
   padding: 0;
   background-size: 100vw 100vh;
   background-attachment: fixed;
-  font-family: monospace;
-
 }
+
 .caja_contacto {
   width: 450px;
   margin: auto;
@@ -179,7 +182,9 @@ footer a {
   margin-top: 5%;
   margin-bottom: 5%;
   border-radius: 7px;
+  font-family: monospace;
 }
+
 .caja_contacto h2 {
   color: #fff;
   text-align: center;
@@ -187,6 +192,7 @@ footer a {
   font-size: 30px;
   margin-bottom: 20px;
 }
+
 .caja_contacto input, .caja_contacto textarea {
   width: 100%;
   margin-bottom: 20px;
@@ -195,22 +201,25 @@ footer a {
   font-size: 17px;
   border: none;
 }
+
 .caja_contacto textarea {
   min-height: 100px;
   max-height: 200px;
   max-width: 100%;
 }
+
 .caja_contacto #boton {
   background: #31384A;
   color: #fff;
   padding: 20px;
 }
+
 .caja_contacto #boton:hover {
   cursor: pointer;
   background: rgba(0,0,0,0.5);
 }
 
-/*   Carrito   */
+/*   CARRITO   */
 
 .carro {
   margin: 0;
@@ -294,13 +303,23 @@ footer a {
   border: black 1px solid;
   border-radius: 10px;
   margin: 2px;
+  padding-top: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.home section .row h2 {
+  font-size: 3.5vh;
+}
+
+.home section .row h3 {
+  font-size: 2.5vh;
+}
+
 .home section .row p {
   text-align: center;
+  font-size: 1.5vh;
 }
 
 /*   PREGUNTAS FRECUENTES   */

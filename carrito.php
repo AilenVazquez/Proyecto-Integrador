@@ -3,10 +3,11 @@
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <title>Carrito</title>
-  <?php include("Partes/head.php") ?>
-</head>
+  <head>
+    <title>Carrito</title>
+    <?php include("Partes/head.php") ?>
+  </head>
+  
   <body class="carro">
     <header>
       <?php include("Partes/header.php") ?>

@@ -15,73 +15,73 @@ require_once("Partes/usuario.php");
 
     <section>
       <div class="row">
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
-          <div class="col-6 col-sm-4 col-md-3">
+          <div class="col-6 col-sm-4 col-lg-3">
             <img src="img/productos.jpg" alt="">
             <h2>Producto</h2>
             <h3>$10000</h3>
