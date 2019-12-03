@@ -431,3 +431,98 @@ article .respuesta{
   margin-left: 30vh 33% 30vh 33%;
   font-size: 7vh;
 }
+
+
+
+
+
+/*   RESTABLECIMIENTO DE CONTRASEÑA  */
+
+.rest {
+  margin: 0;
+  padding: 0;
+  background: url(../img/ecommerce.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.caja_rest {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color:#fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.caja_rest .avatar {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.caja_rest h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.caja_rest h2 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.caja_rest label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.caja_rest input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.caja_rest input[type="email"]{
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+}
+
+.caja_rest input[type="submit"]{
+  border: none;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  background: #fff2;
+  font-size: 18px;
+  border-radius: 20px;
+}
+.caja_rest a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+  position: relative;
+  top: -40px;
+}
+
+.caja_rest a:hover {
+  color: #fff;
+}
