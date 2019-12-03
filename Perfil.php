@@ -1,6 +1,8 @@
 <?php
  require_once("Partes/usuario.php");
- ?>
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -19,7 +21,9 @@
       </article>
 
       <div class="usuario">
-        <img class="usuario" src="img\usuario.png" alt="">
+        <center>
+          <img class="usuario" src="img\usuario.png" alt="">
+        </center>
       </div>
 
       <div class="usuario1">

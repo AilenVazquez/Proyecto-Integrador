@@ -1,7 +1,7 @@
 <?php
 require_once("Partes/usuario.php");
  ?>
-.<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Preguntas Frecuentes</title>

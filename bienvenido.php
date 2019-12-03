@@ -17,7 +17,7 @@ if($_SESSION){
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bienvenido</title>
+    <title>Bienvenida</title>
     <?php include("Partes/head.php") ?>
   </head>
 
@@ -26,9 +26,13 @@ if($_SESSION){
       <?php include("Partes/header.php") ?>
     </header>
 
-    <main>
-      <h1>Bienvenido!</h1>
-    </main>
+    <section>
+      <article class="">
+        <main>
+          <h1>Bienvenido <?=$_SESSION["nombre"]?>!</h1>
+        </main>
+      </article>
+    </section>
 
     <footer>
       <?php include("Partes/footer.php") ?>

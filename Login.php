@@ -27,8 +27,6 @@ function validarRegistracion($unArray) {
         }
     }
 
-
-
     return $errores;
 }
 
