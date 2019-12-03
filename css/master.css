@@ -143,7 +143,6 @@ footer a {
 
 /*   CONTATO   */
 
-
 .contacto {
   background-image: url(../img/contacto.jpg);
   margin: 0;
@@ -192,7 +191,9 @@ footer a {
   cursor: pointer;
   background: rgba(0,0,0,0.5);
 }
+
 /*   Carrito   */
+
 .carro {
   margin: 0;
   padding: 0;
@@ -283,8 +284,10 @@ footer a {
 .home section .row p {
   text-align: center;
 }
-/*Preguntas Frecuentes y Perfil De usuario*/
-body#index{
+
+/*   PREGUNTAS FRECUENTES   */
+
+body #index{
   margin: 0;
   padding: 0;
   background color:  rgb(232, 232, 232);
@@ -293,6 +296,34 @@ body#index{
   height: 100vh;
   position: inherit;
 }
+
+/*   PERFIL DE USUARIO   */
+
+article#titulo{
+  font-size: 35px;
+}
+
+body #index article{
+  padding: inherit;
+  margin-left: 20px;
+  float: inherit;
+  font-size: 20px;
+}
+
+.usuario img{
+  display: block;
+  width: 400px;
+  height:400px;
+  position: relative;
+}
+
+.usuario1 article{
+  font-size: 30px;
+  background-color: rgba(0, 209, 255, 0.65);
+}
+
+/*   ???   */
+
 .padre{
      box-sizing: border-box;
      max-width: 460px;
@@ -304,7 +335,7 @@ p strong{
   padding-left: 20px;
   font-size: 25px;
 }
-li div.numero{
+li div .numero{
   float: left;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -316,25 +347,7 @@ li div.numero{
   background-color: black;
   border-radius: 50%;
 }
-article#titulo{
-  font-size: 35px;
-}
-article{
-  padding: inherit;
-  margin-left: 20px;
-  float: inherit;
-  font-size: 20px;
-}
-article.respuesta{
+
+article .respuesta{
   font-size: 15px;
-}
-.usuario img{
-  display: block;
-  width: 400px;
-  height:400px;
-  position: relative;
-}
-.usuario1 article{
-  font-size: 30px;
-  background-color: rgba(0, 209, 255, 0.65);
 }
