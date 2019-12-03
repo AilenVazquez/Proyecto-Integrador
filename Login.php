@@ -93,7 +93,7 @@ if($_POST) {
           </label>
           <input  type="checkbox" id="gridCheck" name="recordarme">
         </div>
-        <a href="#">Olvido su contraseña?</a><br>
+        <a href="Restablecimiento de contraseña.php">Olvido su contraseña?</a><br>
         <a href="Registro.php">Crear cuenta</a>
       </form>
     </section>
