@@ -1,7 +1,16 @@
 <?php
 
-session_start();
+require_once("Partes/usuario.php");
 
+if($_SESSION){
+  $nombre= $_SESSION["nombre"];
+  $email= $_SESSION["email"];
+  $username= $_SESSION["username"];
+  $imagen="imagenes/".$_SESSION["imagen"];
+} else {
+  header('Location: Login.php');
+  exit;
+}
 
 ?>
 
@@ -9,12 +18,12 @@ session_start();
 <html lang="en">
   <head>
     <title>Bienvenido</title>
-    <?php include("Partes/head.html") ?>
+    <?php include("Partes/head.php") ?>
   </head>
 
   <body class="bienvenido">
     <header>
-      <?php include("Partes/header.html") ?>
+      <?php include("Partes/header.php") ?>
     </header>
 
     <main>
@@ -22,7 +31,7 @@ session_start();
     </main>
 
     <footer>
-      <?php include("Partes/footer.html") ?>
+      <?php include("Partes/footer.php") ?>
     </footer>
   </body>
 

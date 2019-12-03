@@ -1,13 +1,16 @@
+<?php
+require_once("Partes/usuario.php");
+ ?>
 .<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <title>Preguntas Frecuentes</title>
-     <?php include("Partes/head.html") ?>
+     <?php include("Partes/head.php") ?>
   </head>
 
   <body id="index">
     <header>
-      <?php include("Partes/header.html") ?>
+      <?php include("Partes/header.php") ?>
     </header>
 
     <section>
@@ -51,7 +54,7 @@
     </section>
 
     <footer>
-      <?php include("Partes/footer.html") ?>
+      <?php include("Partes/footer.php") ?>
     </footer>
   </body>
 </html>

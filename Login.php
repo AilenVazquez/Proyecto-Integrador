@@ -1,5 +1,9 @@
 <?php
-session_start();
+require_once("Partes/usuario.php");
+if($_SESSION){
+  header('Location: bienvenido.php');
+  exit;
+}
 function validarRegistracion($unArray) {
 
     $errores = [];
@@ -30,8 +34,6 @@ function validarRegistracion($unArray) {
 
 if($_POST) {
     $arrayDeErrores = validarRegistracion($_POST);
-    var_dump($arrayDeErrores);
-
     if(count($arrayDeErrores) === 0) {
         // LOGUEO AL USUARIO
         $usuariosGuardados = file_get_contents('usuarios.json');
@@ -41,18 +43,21 @@ if($_POST) {
             $userFinal = json_decode($usuarioJson, true);
 
             if($_POST['email'] == $userFinal['email']) {
+              echo "email correcto";
 
                 if(password_verify($_POST['password'], $userFinal['password'])) {
+                  echo "login correcto";
+                  $_SESSION['nombre'] = $userFinal['nombre'];
+                  $_SESSION['email'] = $userFinal['email'];
+                  $_SESSION['username'] = $userFinal['username'];
+                  $_SESSION['imagen'] = $userFinal['imagen'];
+                  if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
 
-
-                    $_SESSION['email'] = $userFinal['email'];
-                    if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
-
-                        setcookie('userEmail', $userFinal['email'], time() + 60 * 60 * 24 * 7);
-                        setcookie('userPass', $userFinal['password'], time() + 60 * 60 * 24 * 7);
-                    }
-                    header('Location: bienvenido.php');
-                    exit;
+                      setcookie('username', $userFinal['username'], time() + 60 * 60 * 24 * 7);
+                      setcookie('userPass', $userFinal['password'], time() + 60 * 60 * 24 * 7);
+                  }
+                  header('Location: bienvenido.php');
+                  exit;
                 }
             }
         }
@@ -66,12 +71,12 @@ if($_POST) {
 <html lang="en" dir="ltr">
   <head>
     <title>Login</title>
-    <?php include("Partes/head.html") ?>
+    <?php include("Partes/head.php") ?>
   </head>
 
   <body class="login">
     <header>
-      <?php include("Partes/header.html") ?>
+      <?php include("Partes/header.php") ?>
     </header>
 
     <section class="caja_login">
@@ -99,7 +104,7 @@ if($_POST) {
     </section>
 
     <footer>
-      <?php include("Partes/footer.html") ?>
+      <?php include("Partes/footer.php") ?>
     </footer>
 
   </body>

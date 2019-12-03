@@ -42,6 +42,7 @@ header {
 
 footer {
   padding: 3vh 4% 2vh 4%;
+  height: 50px;
   background-color: rgb(246, 255, 154);
   width: 100%;
   position: fixed;
@@ -340,6 +341,26 @@ body #index article{
 
 article .titulo{
   font-size: 35px;
+}
+.boton-salir label {
+  display: block;
+  position: absolute;
+  right:  180px;
+  top: 25px;
+  font-size: 20px;
+}
+.boton-salir button {
+  display: block;
+  position: absolute;
+  right:  50px;
+  top: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #1883ba;
+  border-radius: 6px;
+  border: 1px solid #0016b0;
 }
 
 /*   ???   */

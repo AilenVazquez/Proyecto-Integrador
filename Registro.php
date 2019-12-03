@@ -1,6 +1,10 @@
 <?php
 
-session_start();
+require_once("Partes/usuario.php");
+if($_SESSION){
+  header('Location: bienvenido.php');
+  exit;
+}
 
 function validarRegistracion($unArray) {
 
@@ -15,12 +19,12 @@ function validarRegistracion($unArray) {
             $errores['nombre'] = "Tu Nombre debe tener al menos 2 caracteres.";
         }
     }
-    if( isset($unArray['apellido']) ) {
-        if( empty($unArray['apellido']) ) {
-            $errores['apellido'] = "Este campo debe completarse.";
+    if( isset($unArray['username']) ) {
+        if( empty($unArray['username']) ) {
+            $errores['username'] = "Este campo debe completarse.";
         }
-        elseif( strlen($unArray['apellido']) < 2 ) {
-            $errores['apellido'] = "Tu Apellido debe tener al menos 2 caracteres.";
+        elseif( strlen($unArray['username']) < 2 ) {
+            $errores['username'] = "Tu Usuario debe tener al menos 2 caracteres.";
         }
     }
 
@@ -65,9 +69,21 @@ function validarRegistracion($unArray) {
             $errores['postal'] = "Tu codigo postal es erroneo";
         }
     }
+    if ($_FILES) {
+      if ($_FILES["img"]["error"] != 0) {
+        $errores[] = "Hubo un error al cargar la imagen <br>";
+      }
+      else{
+        $ext = pathinfo($_FILES["img"]["name"],PATHINFO_EXTENSION);
+
+        if ($ext != "jpg" && $ext != "jpeg" && $ext != "png") {
+          $errores[] = "La imagen debe ser jpg, jpeg o png <br>";
+        }
+
+      }
 
 
-
+    }
     return $errores;
 }
 
@@ -77,7 +93,7 @@ if($_POST) {
         // REGISTRO AL USUARIO
         $usuarioFinal = [
             'nombre' => trim($_POST['nombre']),
-            'apellido' => trim($_POST['apellido']),
+            'username' => trim($_POST['username']),
             'email' => $_POST['email'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
             'address' => $_POST['address'],
@@ -85,16 +101,22 @@ if($_POST) {
             'postal' => $_POST['postal']
 
         ];
+        $ext = pathinfo($_FILES["img"]["name"],PATHINFO_EXTENSION);
+        $nombreFoto = "foto " . $usuarioFinal["nombre"] . "." . $ext;
+        move_uploaded_file($_FILES["img"]["tmp_name"], "img/".$nombreFoto);
+        $usuarioFinal["imagen"] = $nombreFoto;
 
         // ENVIAR A LA BASE DE DATOS $usuarioFinal
         $jsonDeUsuario = json_encode($usuarioFinal);
         file_put_contents('usuarios.json', $jsonDeUsuario . PHP_EOL, FILE_APPEND);
         if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
 
-            setcookie('userEmail', $usuarioFinal['email'], time() + 60 * 60 * 24 * 7);
+            setcookie('username', $usuarioFinal['username'], time() + 60 * 60 * 24 * 7);
             setcookie('userPass', $usuarioFinal['password'], time() + 60 * 60 * 24 * 7);
+            header('Location: bienvenido.php');
+            exit;
         }
-        header('Location: bienvenido.php');
+        header('Location: Login.php');
         exit;
     }
 }
@@ -121,27 +143,27 @@ if($_POST) {
 <html lang="en" dir="ltr">
   <head>
     <title>Registro</title>
-    <?php include("Partes/head.html") ?>
+    <?php include("Partes/head.php") ?>
   </head>
 
   <body class="Registro">
       <header>
-        <?php include("Partes/header.html") ?>
+        <?php include("Partes/header.php") ?>
       </header>
 
       <section class="form-registro">
 
-        <form action="Registro.php" method="post">
+        <form action="Registro.php" method="post" enctype="multipart/form-data">
           <div class="form-row">
             <div class="form-group col-md-6">
-              <label for="nombre">Nombres</label>
+              <label for="nombre">Nombre Completo</label>
               <input type="text" class="form-control" id="nombre" name="nombre"placeholder="Nombres">
               <small class="text-danger"><?= isset($arrayDeErrores['nombre']) ? $arrayDeErrores['nombre'] : "" ?></small>
             </div>
             <div class="form-group col-md-6">
-              <label for="apellido">Apellidos</label>
-              <input type="text" class="form-control" id="apellido" name="apellido"placeholder="Apellidos">
-              <small class="text-danger"><?= isset($arrayDeErrores['apellido']) ? $arrayDeErrores['apellido'] : "" ?></small>
+              <label for="username">Usuario</label>
+              <input type="text" class="form-control" id="username" name="username"placeholder="Usuario">
+              <small class="text-danger"><?= isset($arrayDeErrores['username']) ? $arrayDeErrores['username'] : "" ?></small>
             </div>
           </div>
           <div class="form-row">
@@ -192,12 +214,16 @@ if($_POST) {
             </label>
             </div>
           </div>
+          <div class="container">
+              <label for="img">Foto de perfil:</label> <br>
+              <input type="file" name="img" value="">
+          </div>
           <button type="submit" class="btn btn-primary">Registrarme</button>
         </form>
       </section>
 
       <footer>
-        <?php include("Partes/footer.html") ?>
+        <?php include("Partes/footer.php") ?>
       </footer>
   </body>
 </html>

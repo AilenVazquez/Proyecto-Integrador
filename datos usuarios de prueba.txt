@@ -1,0 +1,39 @@
+Nombre: Jon Snow
+Usuario: Jonny
+email: jon@gmail.com
+password: 11111111
+Direccion: 123 castle black
+ciudad : the wall
+pais: Bolivia
+cod postal:1212
+imagen:  jon snow.jpg
+-----------------------------------------
+Nombre: Arya Stark 
+Usuario: Arya
+email: arya@gmail.com
+password: 22222222
+Direccion: 123 winterfell
+ciudad : the north
+pais: Argentina
+cod postal:5500
+imagen:  arya stark.jpg
+-------------------------------------------
+Nombre: Sansa Stark 
+Usuario: sansa
+email: sansa@gmail.com
+password: 33333333
+Direccion: 123 winterfell
+ciudad : the north
+pais: Argentina
+cod postal:5500
+imagen:  sansa stark.jpg
+-------------------------------------------
+Nombre: Bran Stark 
+Usuario: bran
+email: bran@gmail.com
+password: 33333333
+Direccion: 123 winterfell
+ciudad : the north
+pais: Argentina
+cod postal:5500
+imagen:  bran stark.jpg
