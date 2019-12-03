@@ -120,6 +120,7 @@ if($_POST) {
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Registro</title>
     <?php include("Partes/head.html") ?>
   </head>
 

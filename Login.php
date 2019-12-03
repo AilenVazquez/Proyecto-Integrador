@@ -65,6 +65,7 @@ if($_POST) {
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Login</title>
     <?php include("Partes/head.html") ?>
   </head>
 

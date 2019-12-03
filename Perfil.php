@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr"> 
+<html lang="en" dir="ltr">
   <head>
+    <title>Perfil</title>
     <?php include("Partes/head.html") ?>
   </head>
 
@@ -10,7 +11,7 @@
     </header>
 
     <section>
-      <article id="titulo">
+      <article class="titulo">
         Perfil del Usuario
       </article>
 
@@ -40,7 +41,7 @@
     </section>
 
     <footer>
-      <?php include("Partes/head.html") ?>
+      <?php include("Partes/footer.html") ?>
     </footer>
   </body>
 </html>

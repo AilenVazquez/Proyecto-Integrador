@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Home</title>
     <?php include("Partes/head.html") ?>
   </head>
 

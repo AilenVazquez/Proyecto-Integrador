@@ -304,21 +304,18 @@ footer a {
 
 /*   PREGUNTAS FRECUENTES   */
 
-body #index{
+body #index {
   margin: 0;
   padding: 0;
-  background color:  rgb(232, 232, 232);
-  background-size: cover;
   font-family: sans-serif;
-  height: 100vh;
-  position: inherit;
 }
 
-/*   PERFIL DE USUARIO   */
-
-article#titulo{
-  font-size: 35px;
+#index section {
+  background-color: rgb(241, 239, 239);
 }
+
+/*   PERFIL   */
+
 
 body #index article{
   padding: inherit;
@@ -339,6 +336,11 @@ body #index article{
   background-color: rgba(0, 209, 255, 0.65);
 }
 
+/* PREGUNTAS Y PERFIL*/
+
+article .titulo{
+  font-size: 35px;
+}
 
 /*   ???   */
 

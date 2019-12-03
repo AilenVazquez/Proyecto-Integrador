@@ -1,6 +1,7 @@
 .<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Preguntas Frecuentes</title>
      <?php include("Partes/head.html") ?>
   </head>
 
@@ -10,9 +11,10 @@
     </header>
 
     <section>
-     <article id="titulo">
+      <article class="titulo">
         Preguntas Frecuentes
       </article>
+
       <div class="conteiner">
         <ul class="list-group list-group-flush">
           <li class="list-group-item">

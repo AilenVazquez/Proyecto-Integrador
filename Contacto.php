@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>Contacto</title>
     <?php include("Partes/head.html") ?>
   </head>
 
@@ -21,7 +22,7 @@
     </section>
 
     <footer>
-      <?php include("Partes/head.html") ?>
+      <?php include("Partes/footer.html") ?>
     </footer>
 
   </body>
