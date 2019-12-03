@@ -3,7 +3,7 @@
   <head>
     <?php include("Partes/head.html") ?>
   </head>
-  
+
   <body class="home">
     <header>
       <?php include("Partes/header.html") ?>
@@ -87,7 +87,7 @@
     </section>
 
     <footer>
-      <?php include("Partes/head.html") ?>
+      <?php include("Partes/footer.html") ?>
     </footer>
   </body>
 </html>

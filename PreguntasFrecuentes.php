@@ -49,7 +49,7 @@
     </section>
 
     <footer>
-      <?php include("Partes/head.html") ?>
+      <?php include("Partes/footer.html") ?>
     </footer>
   </body>
 </html>
