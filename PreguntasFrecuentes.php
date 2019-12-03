@@ -22,7 +22,7 @@ require_once("Partes/usuario.php");
         <ul class="list-group list-group-flush">
           <li class="list-group-item">
             <div class="numero"> 1 </div>
-            <article class="pregunta"> ¿Cual es el miimo de compra?</article>
+            <article class="pregunta"> ¿Cual es el minimo de compra?</article>
             <article class="respuesta">El minimo de compra son 12 unidades.</article>
           </li>
 
