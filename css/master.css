@@ -427,8 +427,9 @@ article .respuesta{
 
 /*  BIENVENIDA   */
 
-.bienenido {
-  background-color: rgb(241, 239,239);
+.bienvenido {
+  background: url(../img/atardecer-en-la-albufera-comparativa-de-filtros-inversos-sergio-arias.jpg) no-repeat center top;
+background-size: 100vw 100vh;
 }
 
 .bienvenido main h1 {
