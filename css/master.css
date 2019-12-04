@@ -283,7 +283,11 @@ footer a {
 }
 
 .Registro .form-registro {
-  padding: 9vh 10% 9vh 10%;
+  padding: 6vh 10% 9vh 10%;
+}
+
+.Registro .form-registro h1 {
+  margin-bottom: 6vh;
 }
 
 .Registro .form-registro form{
@@ -295,6 +299,7 @@ footer a {
 
 .Registro .container {
   padding: 5px;
+  margin: 0;
 }
 
 /*   HOME   */
@@ -304,7 +309,7 @@ footer a {
 }
 
 .home section {
-  padding: 9vh 7% 9vh 7%;
+  padding: 8vh 6% 8vh 6%;
   background-color: rgb(241, 239, 239);
 }
 
@@ -315,11 +320,10 @@ footer a {
 .col-6 {
   border: black 1px solid;
   border-radius: 10px;
-  margin: 2px;
   padding-top: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .home section .row h2 {

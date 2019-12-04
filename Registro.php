@@ -19,6 +19,9 @@ function validarRegistracion($unArray) {
             $errores['nombre'] = "Tu Nombre debe tener al menos 2 caracteres.";
         }
     }
+
+    // Validamos campu "usuario"
+
     if( isset($unArray['username']) ) {
         if( empty($unArray['username']) ) {
             $errores['username'] = "Este campo debe completarse.";
@@ -38,6 +41,19 @@ function validarRegistracion($unArray) {
         }
     }
 
+    // Validamos campo "telefono"
+
+    if( isset($unArray['telefono']) ) {
+        if( empty($unArray['telefono']) ) {
+            $errores['telefono'] = "Este campo debe completarse.";
+        }
+        elseif( strlen($unArray['telefono']) < 9 ) {
+            $errores['telefono'] = "Tu Usuario debe tener al menos 9 caracteres.";
+        }
+    }
+
+    // Validamos campo "password"
+
     if( isset($unArray['password']) ) {
         if( empty($unArray['password']) ) {
             $errores['password'] = "Este campo debe completarse.";
@@ -46,21 +62,42 @@ function validarRegistracion($unArray) {
             $errores['password'] = "Tu contraseña debe tener al menos 6 caracteres.";
         }
     }
+
+    if ( empty($unArray['repassword']) ) {
+        if( empty($unArray['repassword']) ) {
+          $errores['repassword'] = "Este campo debe completarse.";
+        }
+        elseif ($unArray["password"] != $unArray['repassword']) {
+          $errores ["repassword"] = "Las contraseñas no coinciden";
+        }
+    }
+
+    // Validamos campo "Direccion"
+
     if( isset($unArray['address']) ) {
         if( empty($unArray['address']) ) {
             $errores['address'] = "Este campo debe completarse.";
         }
     }
+
+    // Validamos campo "ciudad"
+
     if( isset($unArray['city']) ) {
         if( empty($unArray['city']) ) {
             $errores['city'] = "Este campo debe completarse.";
         }
     }
+
+    // Validamos campo "pais"
+
     if( isset($unArray['state']) ) {
         if( $unArray['state']== "Paises" ) {
             $errores['state'] = "Este campo debe completarse.";
         }
     }
+
+    // Validamos campo "codigo postal"
+
     if( isset($unArray['postal']) ) {
         if( empty($unArray['postal']) ) {
             $errores['postal'] = "Este campo debe completarse.";
@@ -69,6 +106,7 @@ function validarRegistracion($unArray) {
             $errores['postal'] = "Tu codigo postal es erroneo";
         }
     }
+
     if ($_FILES) {
       if ($_FILES["img"]["error"] != 0) {
         $errores[] = "Hubo un error al cargar la imagen <br>";
@@ -79,9 +117,7 @@ function validarRegistracion($unArray) {
         if ($ext != "jpg" && $ext != "jpeg" && $ext != "png") {
           $errores[] = "La imagen debe ser jpg, jpeg o png <br>";
         }
-
       }
-
 
     }
     return $errores;
@@ -95,7 +131,9 @@ if($_POST) {
             'nombre' => trim($_POST['nombre']),
             'username' => trim($_POST['username']),
             'email' => $_POST['email'],
+            'telefono' =>  $_POST['telefono'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
+            'repassword' => password_hash($_POST['repassword'], PASSWORD_DEFAULT),
             'address' => $_POST['address'],
             'city' => $_POST['city'],
             'postal' => $_POST['postal']
@@ -146,7 +184,17 @@ function persistirDato($arrayE, $campo) {
 
       <section class="form-registro">
 
+        <center>
+          <h1>Crea tu cuenta</h1>
+        </center>
+
         <form action="Registro.php" method="post" enctype="multipart/form-data">
+
+          <div class="container">
+              <label for="img">Foto de perfil:</label> <br>
+              <input type="file" name="img" value="">
+          </div>
+
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="nombre">Nombre Completo</label>
@@ -169,9 +217,23 @@ function persistirDato($arrayE, $campo) {
             </div>
 
             <div class="form-group col-md-6">
+              <label for="telefono">Numero de telefono</label>
+              <input type="text" class="form-control" id="telefono" name="telefono"placeholder="2611111111" value="<?= persistirDato($arrayDeErrores, 'username'); ?>">
+              <small class="text-danger"><?= isset($arrayDeErrores['username']) ? $arrayDeErrores['username'] : "" ?></small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
               <label for="password">Contraseña</label>
               <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
               <small class="text-danger"><?= isset($arrayDeErrores['password']) ? $arrayDeErrores['password'] : "" ?></small>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="repassword">Repite tu contraseña</label>
+              <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Contraseña">
+              <small class="text-danger"><?= isset($arrayDeErrores['repassword']) ? $arrayDeErrores['repassword'] : "" ?></small>
             </div>
           </div>
 
@@ -215,11 +277,8 @@ function persistirDato($arrayE, $campo) {
             </div>
           </div>
 
-          <div class="container">
-              <label for="img">Foto de perfil:</label> <br>
-              <input type="file" name="img" value="">
-          </div>
-          
+
+
           <button type="submit" class="btn btn-primary">Registrarme</button>
         </form>
       </section>

@@ -1,5 +1,5 @@
 <?php
-function validarRegistracion($unArray) {
+  function validarRegistracion($unArray) {
 
     $errores = [];
 
@@ -13,24 +13,24 @@ function validarRegistracion($unArray) {
         }
     }
     return $errores;
-    }
+  }
     if($_POST) {
         $arrayDeErrores = validarRegistracion($_POST);
         if(count($arrayDeErrores) === 0) {
-    $usuariosGuardados = file_get_contents('usuarios.json');
-    $arrayUsuarios = explode(PHP_EOL, $usuariosGuardados);
-    array_pop($arrayUsuarios);
-    foreach($arrayUsuarios as $usuarioJson) {
-        $userFinal = json_decode($usuarioJson, true);
+          $usuariosGuardados = file_get_contents('usuarios.json');
+          $arrayUsuarios = explode(PHP_EOL, $usuariosGuardados);
+          array_pop($arrayUsuarios);
 
-        if($_POST['email'] == $userFinal['email']) {
-          echo "email correcto";
-          header('Location: Codigo de Restablecimiento.php');
-           exit;
-      }
+          foreach($arrayUsuarios as $usuarioJson) {
+            $userFinal = json_decode($usuarioJson, true);
+
+            if($_POST['email'] == $userFinal['email']) {
+              header('Location: Codigo de Restablecimiento.php');
+              exit;
+            }
+          }
+        }
     }
-  }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
