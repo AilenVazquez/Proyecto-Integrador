@@ -50,6 +50,9 @@ function validarRegistracion($unArray) {
         elseif( strlen($unArray['telefono']) < 9 ) {
             $errores['telefono'] = "Tu Usuario debe tener al menos 9 caracteres.";
         }
+        elseif ( !is_numeric($unArray['telefono']) ) {
+            $errores['telefono'] = "Debes ingresar solo numeros.";
+        }
     }
 
     // Validamos campo "password"
@@ -104,6 +107,9 @@ function validarRegistracion($unArray) {
         }
         elseif( strlen($unArray['postal']) != 4 ) {
             $errores['postal'] = "Tu codigo postal es erroneo";
+        }
+        elseif ( !is_numeric($unArray['postal']) ) {
+            $errores['postal'] = "Debes ingresar solo numeros.";
         }
     }
 
@@ -219,7 +225,7 @@ function persistirDato($arrayE, $campo) {
             <div class="form-group col-md-6">
               <label for="telefono">Numero de telefono</label>
               <input type="text" class="form-control" id="telefono" name="telefono"placeholder="2611111111" value="<?= persistirDato($arrayDeErrores, 'username'); ?>">
-              <small class="text-danger"><?= isset($arrayDeErrores['username']) ? $arrayDeErrores['username'] : "" ?></small>
+              <small class="text-danger"><?= isset($arrayDeErrores['telefono']) ? $arrayDeErrores['telefono'] : "" ?></small>
             </div>
           </div>
 
