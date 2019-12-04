@@ -9,9 +9,11 @@
 
        if($userActivo == $userFinal['username']) {
          $nombre = $userFinal['nombre'];
+         $usuario = $userFinal ['username'];
          $email = $userFinal['email'];
-         $ciudad = $userFinal['city'];
+         $telefono = $userFinal['telefono'];
          $direccion = $userFinal['address'];
+         $ciudad = $userFinal['city'];
          $postal= $userFinal['postal'];
          $imagen= $userFinal['imagen'];
 
@@ -47,23 +49,31 @@
       <div class="usuario1">
         <br>
         <article class="">
-          <strong>Nombre: <?= $nombre ?></strong>
+          <strong>Nombre:</strong> <?= $nombre ?>
         </article>
         <br>
         <article class="">
-          Email: <?= $email ?>
+          <strong>Usuario:</strong> <?= $username ?>
         </article>
         <br>
         <article class="">
-          Direccion: <?= $direccion ?>
+          <strong>Email:</strong> <?= $email ?>
         </article>
         <br>
         <article class="">
-          Ciudad: <?= $ciudad ?>
+          <strong>Telefono:</strong> <?= $telefono ?>
         </article>
         <br>
         <article class="">
-          Codigo Postal: <?= $postal ?>
+          <strong>Direccion:</strong> <?= $direccion ?>
+        </article>
+        <br>
+        <article class="">
+          <strong>Ciudad:</strong> <?= $ciudad ?>
+        </article>
+        <br>
+        <article class="">
+          <strong>Codigo Postal:</strong> <?= $postal ?>
         </article>
 
         <br>
