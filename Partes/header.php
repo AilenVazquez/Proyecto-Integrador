@@ -2,7 +2,7 @@
   <div class="headerHome">
     <ul class="ulHeader">
       <li>
-        <a href="http://localhost/Proyecto-Integrador/Home.php">Home</a>
+        <a href="http://localhost/Proyecto-Integrador/Home.php"><h1> HOME</h1></a>
       </li>
     </ul>
   </div>
@@ -26,6 +26,7 @@
 
       <form class="boton-salir" action="logout.php" method="post">
         <label for=""><a href="http://localhost/Proyecto-Integrador/Perfil.php"><?= $userActivo ?></a></label>
+
         <button type="submit" name="salir">Cerrar sesion</button>
       </form>
 
@@ -33,13 +34,13 @@
       <ul>
 
         <li>
-          <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta/</a>
+          <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta /</a>
         </li>
         <li>
-          <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá/</a>
+          <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá /</a>
         </li>
         <li>
-          <a href="http://localhost/Proyecto-Integrador/Perfil.php">Perfil/</a>
+          <a href="http://localhost/Proyecto-Integrador/Perfil.php">Perfil / </a>
         </li>
         <li>
           <a href="http://localhost/Proyecto-Integrador/carrito.php"><i class="fas fa-shopping-cart"></i></a>

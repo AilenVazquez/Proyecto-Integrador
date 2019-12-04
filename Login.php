@@ -46,11 +46,12 @@ if($_POST) {
                   $_SESSION['email'] = $userFinal['email'];
                   $_SESSION['username'] = $userFinal['username'];
                   $_SESSION['imagen'] = $userFinal['imagen'];
-                  if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
 
+                  if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
                       setcookie('username', $userFinal['username'], time() + 60 * 60 * 24 * 7);
                       setcookie('userPass', $userFinal['password'], time() + 60 * 60 * 24 * 7);
                   }
+                  
                   header('Location: bienvenido.php');
                   exit;
                 }
@@ -89,8 +90,7 @@ if($_POST) {
 
         <input type="submit" name=" " value="ingresar">
         <div class="recordarme">
-          <label  for="gridCheck">  Recuerdame
-          </label>
+          <label  for="gridCheck">  Recuerdame </label>
           <input  type="checkbox" id="gridCheck" name="recordarme">
         </div>
         <a href="Restablecimiento de contraseña.php">Olvido su contraseña?</a><br>
