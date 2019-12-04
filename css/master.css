@@ -42,10 +42,8 @@ header {
 
 footer {
   padding: 3vh 4% 2vh 4%;
-  height: 50px;
   background-color: rgb(246, 255, 154);
   width: 100%;
-  position: fixed;
   bottom: 1px;
   right: 1px;
 }
@@ -82,10 +80,11 @@ footer a {
   color:#fff;
   top: 50%;
   left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translate(-50%, -65%);
   box-sizing: border-box;
   padding: 70px 30px;
+  margin-bottom: 20vh;
 }
 
 .caja_login .avatar {
@@ -238,10 +237,11 @@ footer a {
   padding: 10px 20px;
   top: 50%;
   left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  position: relative;
+  transform: translate(-65%, 8%);
   box-sizing: border-box;
   border-radius: 7px;
+  margin-bottom: 12vh;
 }
 
 .caja_carro li {
@@ -436,7 +436,7 @@ background-size: 100vw 100vh;
 .bienvenido main h1 {
   margin: 30vh 33% 30vh 33%;
   font-size: 7vh;
-  color: white; 
+  color: white;
 }
 
 
