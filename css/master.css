@@ -40,7 +40,6 @@ header {
 
 .nav-header .otros {
   flex-wrap: nowrap;
-  position: absolute;
   right: 3%;
 }
 
