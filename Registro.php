@@ -7,6 +7,7 @@ if($_SESSION){
 }
 $arrayDeErrores = "";
 function validarRegistracion($unArray) {
+    
 
     $errores = [];
 
@@ -65,15 +66,15 @@ function validarRegistracion($unArray) {
             $errores['password'] = "Tu contraseña debe tener al menos 6 caracteres.";
         }
     }
-
-    if ( empty($unArray['repassword']) ) {
+    if( isset($unArray['repassword']) ) {
         if( empty($unArray['repassword']) ) {
-          $errores['repassword'] = "Este campo debe completarse.";
+            $errores['repassword'] = "Este campo debe completarse.";
         }
-        elseif ($unArray["password"] != $unArray['repassword']) {
-          $errores ["repassword"] = "Las contraseñas no coinciden";
+        elseif($unArray['password'] != $unArray['repassword']) {
+            $errores['repassword'] = "Tenés que ingresar la misma contraseña";
         }
     }
+
 
     // Validamos campo "Direccion"
 
@@ -139,7 +140,7 @@ if($_POST) {
             'email' => $_POST['email'],
             'telefono' =>  $_POST['telefono'],
             'password' => password_hash($_POST['password'], PASSWORD_DEFAULT),
-            'repassword' => password_hash($_POST['repassword'], PASSWORD_DEFAULT),
+            // 'repassword' => password_hash($_POST['repassword'], PASSWORD_DEFAULT),
             'address' => $_POST['address'],
             'city' => $_POST['city'],
             'postal' => $_POST['postal']
@@ -160,8 +161,8 @@ if($_POST) {
             header('Location: bienvenido.php');
             exit;
         }
-        // header('Location: Login.php');
-        // exit;
+         header('Location: Registro.php');
+         exit;
     }
 }
 function persistirDato($arrayE, $campo) {
@@ -224,7 +225,7 @@ function persistirDato($arrayE, $campo) {
 
             <div class="form-group col-md-6">
               <label for="telefono">Numero de telefono</label>
-              <input type="text" class="form-control" id="telefono" name="telefono"placeholder="2611111111" value="<?= persistirDato($arrayDeErrores, 'username'); ?>">
+              <input type="text" class="form-control" id="telefono" name="telefono"placeholder="2611111111" value="<?= persistirDato($arrayDeErrores, 'telefono'); ?>">
               <small class="text-danger"><?= isset($arrayDeErrores['telefono']) ? $arrayDeErrores['telefono'] : "" ?></small>
             </div>
           </div>
@@ -238,7 +239,7 @@ function persistirDato($arrayE, $campo) {
 
             <div class="form-group col-md-6">
               <label for="repassword">Repite tu contraseña</label>
-              <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Contraseña">
+              <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Repetir Contraseña">
               <small class="text-danger"><?= isset($arrayDeErrores['repassword']) ? $arrayDeErrores['repassword'] : "" ?></small>
             </div>
           </div>

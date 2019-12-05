@@ -9,7 +9,7 @@
 
        if($userActivo == $userFinal['username']) {
          $nombre = $userFinal['nombre'];
-         $usuario = $userFinal ['username'];
+         $username = $userFinal ['username'];
          $email = $userFinal['email'];
          $telefono = $userFinal['telefono'];
          $direccion = $userFinal['address'];
