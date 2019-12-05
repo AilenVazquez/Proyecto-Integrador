@@ -7,7 +7,7 @@ if($_SESSION){
 }
 $arrayDeErrores = "";
 function validarRegistracion($unArray) {
-    
+
 
     $errores = [];
 
@@ -161,8 +161,34 @@ if($_POST) {
             header('Location: bienvenido.php');
             exit;
         }
-         header('Location: Registro.php');
-         exit;
+
+
+
+                $usuariosGuardados = file_get_contents('usuarios.json');
+                $arrayUsuarios = explode(PHP_EOL, $usuariosGuardados);
+                array_pop($arrayUsuarios);
+                foreach($arrayUsuarios as $usuarioJson) {
+                    $userFinal = json_decode($usuarioJson, true);
+
+                    if($_POST['email'] == $userFinal['email']) {
+                        if(password_verify($_POST['password'], $userFinal['password'])) {
+                          $_SESSION['nombre'] = $userFinal['nombre'];
+                          $_SESSION['email'] = $userFinal['email'];
+                          $_SESSION['username'] = $userFinal['username'];
+                          $_SESSION['imagen'] = $userFinal['imagen'];
+
+                          if(isset($_POST['recordarme']) && $_POST['recordarme'] == "on") {
+                              setcookie('username', $userFinal['username'], time() + 60 * 60 * 24 * 7);
+                              setcookie('userPass', $userFinal['password'], time() + 60 * 60 * 24 * 7);
+                          }
+
+                          header('Location: bienvenido.php');
+                          exit;
+                        }
+                    }
+                }
+
+        
     }
 }
 function persistirDato($arrayE, $campo) {
