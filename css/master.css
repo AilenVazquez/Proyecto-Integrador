@@ -49,7 +49,7 @@ footer {
   padding: 3vh 4% 2vh 4%;
   background-color: rgb(246, 255, 154);
   width: 100%;
-  bottom: 1px;
+  bottom: 0px;
   right: 1px;
 }
 
@@ -63,7 +63,7 @@ footer li {
 
 footer a {
   color: black;
-  padding:  9vh 3% 9vh 3%;
+  padding:  3vh 3% 3vh 3%;
   font-size: 2vh;
 }
 
