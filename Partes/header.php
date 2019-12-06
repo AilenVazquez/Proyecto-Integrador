@@ -40,9 +40,6 @@
           <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá /</a>
         </li>
         <li>
-          <a href="http://localhost/Proyecto-Integrador/Perfil.php">Perfil / </a>
-        </li>
-        <li>
           <a href="http://localhost/Proyecto-Integrador/carrito.php"><i class="fas fa-shopping-cart"></i></a>
         </li>
 

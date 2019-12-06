@@ -19,7 +19,8 @@
 
        }
    }
- }
+ } else header('Location: Login.php');
+  exit;
 ?>
 
 
