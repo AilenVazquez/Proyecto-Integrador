@@ -19,8 +19,11 @@
 
        }
    }
- } else header('Location: Login.php');
-  exit;
+ }
+ if (!$_SESSION) {
+   header('Location: Login.php');
+    exit;
+ }
 ?>
 
 
