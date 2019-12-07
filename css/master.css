@@ -3,7 +3,7 @@
 header {
   margin: 0;
   padding: 3vh 4% 2vh 4%;
-  background-color: rgba(238, 255, 6, 1)
+  background-color: black;
 }
 
 .nav-header {
@@ -11,6 +11,7 @@ header {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  color: white;
 }
 
 .buscador {
@@ -34,8 +35,12 @@ header {
 }
 
 .nav-header a, .nav-header button,.nav-header input {
-  color: black;
+  color: white;
   font-size: 2vh;
+}
+
+.btn-outline-success {
+  border-color: white;
 }
 
 .nav-header .otros {
@@ -47,23 +52,15 @@ header {
 
 footer {
   padding: 3vh 4% 2vh 4%;
-  background-color: rgb(246, 255, 154);
+  background-color: black;
   width: 100%;
-  bottom: 0px;
+  bottom: 1px;
   right: 1px;
 }
 
-footer ul {
-  list-style-type: none;
-}
-
-footer li {
-  display: inline;
-}
-
 footer a {
-  color: black;
-  padding:  3vh 3% 3vh 3%;
+  color: white;
+  padding:  9vh 3% 9vh 3%;
   font-size: 2vh;
 }
 
@@ -308,7 +305,7 @@ footer a {
 }
 
 .home section {
-  padding: 8vh 6% 8vh 6%;
+  padding: 8vh 6% 2vh 6%;
   background-color: rgb(241, 239, 239);
 }
 
@@ -338,6 +335,10 @@ footer a {
   font-size: 1.5vh;
 }
 
+.paginas {
+  margin-top: 3vh;
+}
+
 /*   PREGUNTAS FRECUENTES   */
 
 body #index {
@@ -348,6 +349,17 @@ body #index {
 
 #index section {
   background-color: rgb(241, 239, 239);
+}
+
+#index section .titulo {
+  margin-top: 2vh;
+}
+
+#index section .preguntas {
+  margin-top: 4vh;
+  padding: 20px;
+  font-size: 2.5vh;
+  padding: 0;
 }
 
 /*   PERFIL   */
@@ -443,7 +455,7 @@ article .respuesta{
 }
 
 .bienvenido main h1 {
-  margin: 30vh 33% 30vh 33%;
+  margin: 31vh 33% 33vh 31%;
   font-size: 7vh;
   color: white;
 }
