@@ -40,8 +40,10 @@
     </header>
 
     <section>
-      <article class="titulo">
-        Perfil del Usuario
+      <article class="tituloPerfil">
+        <center>
+          <h1>Perfil del Usuario</h1>
+        </center>
       </article>
 
       <div class="usuario">

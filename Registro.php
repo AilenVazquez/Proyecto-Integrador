@@ -188,7 +188,7 @@ if($_POST) {
                     }
                 }
 
-        
+
     }
 }
 function persistirDato($arrayE, $campo) {
@@ -218,7 +218,7 @@ function persistirDato($arrayE, $campo) {
       <section class="form-registro">
 
         <center>
-          <h1>Crea tu cuenta</h1>
+          <h1>Creá tu cuenta</h1>
         </center>
 
         <form action="Registro.php" method="post" enctype="multipart/form-data">
@@ -264,7 +264,7 @@ function persistirDato($arrayE, $campo) {
             </div>
 
             <div class="form-group col-md-6">
-              <label for="repassword">Repite tu contraseña</label>
+              <label for="repassword">Repití la contraseña</label>
               <input type="password" class="form-control" id="repassword" name="repassword" placeholder="Repetir Contraseña">
               <small class="text-danger"><?= isset($arrayDeErrores['repassword']) ? $arrayDeErrores['repassword'] : "" ?></small>
             </div>
@@ -305,7 +305,7 @@ function persistirDato($arrayE, $campo) {
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="gridCheck" name="recordarme">
               <label class="form-check-label" for="gridCheck">
-                Recuerdame
+                Recordame
             </label>
             </div>
           </div>

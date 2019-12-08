@@ -18,7 +18,7 @@ require_once("Partes/usuario.php"); ?>
         <input type="text" name="nombre" value="" placeholder="Nombre">
         <input type="email" name="correo" value="" placeholder="E-mail">
         <input type="text" name="telefono" value="" placeholder="Teléfono">
-        <textarea name="mensaje"  placeholder="Escriba aqui su mensaje"></textarea>
+        <textarea name="mensaje"  placeholder="Escribí acá tu mensaje"></textarea>
         <input type="button" name="enviar" value="ENVIAR" id="boton">
       </form>
     </section>

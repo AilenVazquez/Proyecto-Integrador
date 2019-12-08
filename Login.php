@@ -51,7 +51,7 @@ if($_POST) {
                       setcookie('username', $userFinal['username'], time() + 60 * 60 * 24 * 7);
                       setcookie('userPass', $userFinal['password'], time() + 60 * 60 * 24 * 7);
                   }
-                  
+
                   header('Location: bienvenido.php');
                   exit;
                 }
@@ -77,7 +77,7 @@ if($_POST) {
 
     <section class="caja_login">
       <img class= "avatar" src="img/images.jpg" alt="logo Login">
-      <h1>Ingrese sus datos</h1>
+      <h1>Ingresá tus datos</h1>
       <form action="login.php" method="post">
         <!-- Usuario -->
         <label for="Email">E-mail</label>
@@ -90,11 +90,11 @@ if($_POST) {
 
         <input type="submit" name=" " value="ingresar">
         <div class="recordarme">
-          <label  for="gridCheck">  Recuerdame </label>
+          <label  for="gridCheck"> Recordame </label>
           <input  type="checkbox" id="gridCheck" name="recordarme">
         </div>
-        <a href="Restablecimiento de contraseña.php">Olvido su contraseña?</a><br>
-        <a href="Registro.php">Crear cuenta</a>
+        <a href="Restablecimiento de contraseña.php">¿Olvidaste tu contraseña?</a><br>
+        <a href="Registro.php">Creá tu cuenta</a>
       </form>
     </section>
 

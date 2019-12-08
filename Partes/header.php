@@ -37,9 +37,9 @@
         <li>
           <a href="http://localhost/Proyecto-Integrador/Registro.php">Creá tu cuenta /</a>
         </li>
-        
+
         <li>
-          <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá /</a>
+          <a href="http://localhost/Proyecto-Integrador/Login.php">Ingresá</a>
         </li>
 
       </ul>
