@@ -7,7 +7,7 @@
     <title>Carrito</title>
     <?php include("Partes/head.php") ?>
   </head>
-  
+
   <body class="carro">
     <header>
       <?php include("Partes/header.php") ?>
