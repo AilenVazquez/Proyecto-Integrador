@@ -23,14 +23,14 @@ require_once("Partes/usuario.php");
       <article class="preguntas">
         <a href="#" onclick="mostrar('divTexto1'); return false" />¿Cuál es el mínimo de compra?</a>
         <div id="divTexto1" style="visibility:hidden">
-          El mínimo de compre es de 3 productos.
+          El mínimo de compra es de 3 productos.
         </div>
 
         <BR>
 
         <a href="#" onclick="mostrar('divTexto2'); return false" />¿Los precios incluyen IVA?</a>
         <div id="divTexto2" style="visibility:hidden">
-          No, los precios no incluyen IVA
+          No, los precios no incluyen IVA.
         </div>
 
         <BR>
