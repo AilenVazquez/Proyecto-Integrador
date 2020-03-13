@@ -4,6 +4,7 @@ if($_SESSION){
   header('Location: bienvenido.php');
   exit;
 }
+
 function validarRegistracion($unArray) {
 
     $errores = [];

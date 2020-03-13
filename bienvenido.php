@@ -2,6 +2,7 @@
 
 require_once("Partes/usuario.php");
 
+
 if($_SESSION){
   $nombre= $_SESSION["nombre"];
   $email= $_SESSION["email"];
@@ -11,7 +12,6 @@ if($_SESSION){
   header('Location: Login.php');
   exit;
 }
-
 ?>
 
 <!DOCTYPE html>

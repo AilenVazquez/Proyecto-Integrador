@@ -116,17 +116,17 @@ function validarRegistracion($unArray) {
 
     if ($_FILES) {
       if ($_FILES["img"]["error"] != 0) {
-        $errores[] = "Hubo un error al cargar la imagen <br>";
+        $errores['imagen'] = "Hubo un error al cargar la imagen <br>";
       }
       else{
         $ext = pathinfo($_FILES["img"]["name"],PATHINFO_EXTENSION);
 
         if ($ext != "jpg" && $ext != "jpeg" && $ext != "png") {
-          $errores[] = "La imagen debe ser jpg, jpeg o png <br>";
+          $errores['imagen'] = "La imagen debe ser jpg, jpeg o png <br>";
         }
       }
 
-    }
+    } 
     return $errores;
 }
 
@@ -225,7 +225,8 @@ function persistirDato($arrayE, $campo) {
 
           <div class="container">
               <label for="img">Foto de perfil:</label> <br>
-              <input type="file" name="img" value="">
+              <input type="file" name="img" value="<?= persistirDato($arrayDeErrores, 'imagen'); ?>">
+              <small class="text-danger"><?= isset($arrayDeErrores['imagen']) ? $arrayDeErrores['imagen'] : "" ?></small>
           </div>
 
           <div class="form-row">
